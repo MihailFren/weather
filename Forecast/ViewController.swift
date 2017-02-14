@@ -15,6 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
     @IBOutlet weak var tempratureLabel: UILabel!
     
+    
+    @IBOutlet weak var temperature1: UILabel!
+    @IBOutlet weak var temperature2: UILabel!
+    @IBOutlet weak var temperature3: UILabel!
+    @IBOutlet weak var temperature4: UILabel!
+    @IBOutlet weak var temperature5: UILabel!
+    
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {

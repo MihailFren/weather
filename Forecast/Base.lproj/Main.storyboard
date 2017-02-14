@@ -118,6 +118,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-af-vAD">
+                                <rect key="frame" x="221" y="333" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -129,6 +136,11 @@
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="4bv-by-4bA" id="NFx-Ac-NAV"/>
+                        <outlet property="temperature1" destination="lIQ-af-vAD" id="xwV-1o-fH6"/>
+                        <outlet property="temperature2" destination="DAs-Cj-DQ1" id="iGu-i8-DeA"/>
+                        <outlet property="temperature3" destination="ibk-5a-10T" id="wL7-yp-7fT"/>
+                        <outlet property="temperature4" destination="VBr-XR-4n3" id="fif-nC-HNT"/>
+                        <outlet property="temperature5" destination="ZKc-VB-9He" id="bQQ-9i-fb7"/>
                         <outlet property="tempratureLabel" destination="Oil-fv-bxh" id="aFD-oO-Fpr"/>
                         <outlet property="weatherDescriptionLabel" destination="cSb-0C-qSw" id="esG-mi-RoU"/>
                     </connections>
