@@ -12,6 +12,9 @@ struct WeatherData {
     var cityName:String?
     var temprature:Double?
     var type:String?
+  
+
+struct Forecast {
     var day1:String?
     var day2:String?
     var day3:String?
@@ -22,4 +25,5 @@ struct WeatherData {
     var temperature3:String?
     var temperature4:String?
     var temperature5:String?
+    }
 }

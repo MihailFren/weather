@@ -39,10 +39,10 @@ class WeatherDownloader {
 class ForecastDownloader {
     
     
-    static let sharedInstance = WeatherDownloader()
+    static let sharedInstance2 = ForecastDownloader()
     
-    func requestWeather(latitude: Double, longitude:Double, comlition: @escaping (_ temprature:[Double]) -> ()) {
-        guard let url2 = URL(string: "http://samples.openweathermap.org/data/2.5/forecast?lat=\(latitude)&lon=\(longitude)&appid=0f1d0cf47de70dae65f65a41d213b0ec") else { return }
+    func requestForecast(latitude: Double, longitude:Double, comlition: @escaping (_ temprature:[Double]) -> ()) {
+        guard let url2 = URL(string: "http://samples.openweathermap.org/data/2.5/forecast?lat=\(latitude)&lon=\(longitude)&appid=fafb8346f8c2ae38e7e9afac073cbfb6") else { return }
         print(url2)
         let session = URLSession(configuration: .default)
         let dataTask = session.dataTask(with: url2) { (data, responce, error) in
@@ -51,6 +51,7 @@ class ForecastDownloader {
                 print(json)
                 let list = json?["list"] as? Array<AnyObject>
                 print(list)
+                
 //                let city = json?["name"] as? String
 //                let type = (json?["weather"] as? Array<Dictionary<String, AnyObject>>)?[0]["description"] as? String
 //                

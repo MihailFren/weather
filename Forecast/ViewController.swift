@@ -39,8 +39,26 @@ class ViewController: UIViewController {
         WeatherDownloader.sharedInstance.requestWeather(latitude: latitude, longitude: longitude, comlition: { (weatherData) in
             self.updateUI(weatherData)
         })
+    }
+    func loadForecastAndUpdateUI() {
+            guard let latitude = locationManager.location?.coordinate.latitude else { return }
+            guard let longitude = locationManager.location?.coordinate.longitude else { return }
+            ForecastDownloader.sharedInstance2.requestForecast(latitude: latitude, longitude: longitude, comlition: { (temp) in
+                self.updateUIForecast(temp)
+            })
 
     }
+ 
+    func updateUIForecast(_ temp: [Double]) {
+    //temperature1.text = weatherData.
+      //  weatherDescriptionLabel.text = weatherData.cityName
+        //if let temp = weatherData.temprature {
+          //  tempratureLabel.text = "\(temp - 273.15)˚"
+        //}
+    }
+
+
+    
     
     func updateUI(_ weatherData: WeatherData) {
         cityLabel.text = weatherData.cityName
@@ -56,11 +74,12 @@ extension ViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             loadWeatherAndUpdateUI()
+            loadForecastAndUpdateUI()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         loadWeatherAndUpdateUI()
+        loadForecastAndUpdateUI()
     }
 }
-
